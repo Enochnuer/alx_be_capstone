@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(n9bjrobod!+-8r2&_4t2fda9vddngfmxno_g3uk(k*a*qe5!z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['enochnuer.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework.authtoken',
     'django_filters',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -140,5 +141,5 @@ REST_FRAMEWORK = {
 
 from datetime import timedelta
 SIMPLE_JWT = {
-    "ACCESS_TOKEN_LIFETIME":timedelta(hours=1)
+    "ACCESS_TOKEN_LIFETIME":timedelta(hours=1000)
 }
