@@ -11,7 +11,7 @@ class UserAdmin(admin.ModelAdmin):
 
 # Customizing Profile Admin
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ('id', 'user', 'address', 'country')  # Fields to display in the list view
+    list_display = ('id', 'user', 'user__username', 'address', 'country')  # Fields to display in the list view
     search_fields = ('user__email', 'address')  # Searching by related user fields
 
 # Registering models with the custom admin classes
