@@ -15,7 +15,7 @@ class OrderSerializer(serializers.ModelSerializer):
     product_name = serializers.SerializerMethodField()
     class Meta:
         model = Order
-        fields = ['id', 'user_email', 'product_name', 'quantity', 'order_date']
+        fields = ['id', 'user', 'product', 'user_email', 'product_name', 'quantity', 'order_date']
 
     def get_user_email(self, obj):
            return obj.user.email
